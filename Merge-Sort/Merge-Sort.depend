@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1540930855 source:d:\higor\documents\github\merge-sort_and_binary-search\merge-sort\main.c
+	<MergeSort.h>
+
+1540930807 d:\higor\documents\github\merge-sort_and_binary-search\merge-sort\mergesort.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<locale.h>
+
+1540930807 source:d:\higor\documents\github\merge-sort_and_binary-search\merge-sort\merge_sort.c
+	<MergeSort.h>
+
