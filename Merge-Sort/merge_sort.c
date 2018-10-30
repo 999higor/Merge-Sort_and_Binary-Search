@@ -127,10 +127,12 @@ int sequencialSearch(int arr[], int size , int num)
 
         if(num == arr[i])
         {
+            printf("\nValue Found!\n");
             return arr[i];
         }else
             if (num < arr[i])
             {
+                printf("\nValue not found !\n");
                 return -1;
             }
 
@@ -146,18 +148,24 @@ int binarySearch(int arr[], int size, int num)
 
     end = size -1;
 
+    //printf("size: %d\n" ,end);
+
     while(begin <= end)
     {
         mid = (begin + end)/2;
         if(num < arr[mid])
         {
             end = mid - 1;
+        }
+        else if(num > arr[mid])
+        {
+            begin = mid + 1;
         }else
-            if(num > arr[mid])
-            {
-                begin = mid + 1;
-            }else
-                return mid;
+        {
+            printf("\nValue found !\n ");
+            return mid;
+        }
     }
+    printf("Value not found !\n");
     return -1;
 }

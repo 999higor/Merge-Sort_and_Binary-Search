@@ -30,8 +30,13 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/Users/Administrador/Documents/GitHub/Merge-Sort_and_Binary-Search/Merge-Sort/" />
 		</Compiler>
+		<Unit filename="MergeSort.h" />
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="merge_sort.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
