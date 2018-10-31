@@ -88,7 +88,7 @@ void printArray(int A[], int size)
 
 int sizeArray()
 {
-    int numero, i=0;
+    long int numero, i=0;
 
     FILE* file = fopen ("values.txt", "r");
 
@@ -101,7 +101,7 @@ int sizeArray()
     return i;
 }
 
-void readFile(int arr[])
+void readFile(long int arr[])
 {
     int numero, i=0;
 
@@ -118,7 +118,7 @@ void readFile(int arr[])
    // return arr;
 }
 
-int sequencialSearch(int arr[], int size , int num)
+int sequencialSearch(long int arr[], int size , int num)
 {
     int i;
 
@@ -127,12 +127,12 @@ int sequencialSearch(int arr[], int size , int num)
 
         if(num == arr[i])
         {
-            printf("\nValue Found!\n");
+            //printf("\nValue Found!\n");
             return arr[i];
         }else
             if (num < arr[i])
             {
-                printf("\nValue not found !\n");
+                //printf("\nValue not found !\n");
                 return -1;
             }
 
@@ -141,7 +141,7 @@ int sequencialSearch(int arr[], int size , int num)
     return -1;
 }
 
-int binarySearch(int arr[], int size, int num)
+int binarySearch(long int arr[], int size, int num)
 {
     int begin, mid, end;
     begin = 0;
@@ -162,10 +162,38 @@ int binarySearch(int arr[], int size, int num)
             begin = mid + 1;
         }else
         {
-            printf("\nValue found !\n ");
+           // printf("\nValue found !\n ");
             return mid;
         }
     }
-    printf("Value not found !\n");
+    //printf("Value not found !\n");
     return -1;
+}
+
+void ReadSearchSequencial(long int arr[], int size)
+{
+    int number;
+
+    FILE* busca = fopen("search.txt", "r");
+
+    while(!feof(busca))
+    {
+        fscanf(busca, "%d", &number);
+        sequencialSearch(arr, size, number);
+    }
+    fclose(busca);
+}
+
+void ReadSearchBinary(long int arr[], int size)
+{
+    int number;
+
+    FILE* busca = fopen("search.txt", "r");
+
+    while(!feof(busca))
+    {
+        fscanf(busca, "%d", &number);
+        binarySearch(arr, size, number);
+    }
+    fclose(busca);
 }
